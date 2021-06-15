@@ -236,7 +236,7 @@ class LabelledTreeAnimation(LabelledTreePlot):
                 self.node_plots[node]['zorder'] = self.params['zorder']['un_covered']
                 self.node_plots[node]['un_covered'] = True
             else:
-                del self.node_plots[node]['colour']
+                self.node_plots[node]['colour'] = self.colours[self.node_plots[node]['type']]
 
         self.newframe(frame_time=self.times['moment'])
 

@@ -29,44 +29,7 @@ if __name__ == '__main__':
     parser.add_argument('--seed', type=int, default=None,
         help='the seed for reproducibility')
 
-    # the colours of the root
-    parser.add_argument('--root_colour', type=str, default=None,
-        help='the main colour of the root')
-    parser.add_argument('--repeating_root_colour', type=str, default=None,
-        help='the colour of the root when repeated in the bijection')
-    parser.add_argument('--un_root_colour', type=str, default=None,
-        help='the colour of the root when completely uncovered in the tree')
-    # the colours of the leaves
-    parser.add_argument('--leaf_colour', type=str, default=None,
-        help='the main colour of the leaves')
-    parser.add_argument('--un_leaf_colour', type=str, default=None,
-        help='the colour of the leaves when uncovered in the tree')
-    # the colours of the nodes
-    parser.add_argument('--node_colour', type=str, default=None,
-        help='the main colour of the remaining nodes')
-    parser.add_argument('--repeating_node_colour', type=str, default=None,
-        help='the colour of the nodes when repeated in the bijection')
-    parser.add_argument('--un_node_colour', type=str, default=None,
-        help='the colour of the nodes when completely uncovered in the tree')
-    # the colours of the edges
-    parser.add_argument('--edge_colour', type=str, default=None,
-        help='the main colour of the edges')
-    parser.add_argument('--leaf_edge_colour', type=str, default=None,
-        help='the colour of the edges connected to a leaf')
-    parser.add_argument('--un_edge_colour', type=str, default=None,
-        help='the colour of the edges when uncovered in the tree')
-    # the colours of the animation effects
-    parser.add_argument('--explore_colour', type=str, default=None,
-        help='the colour when exploring subpath of the tree or the bijection')
-    parser.add_argument('--change_colour', type=str, default=None,
-        help='the colour when transforming uncovered nodes and edges')
-
     kwargs = vars(parser.parse_args())
-
-    # changing the defined colours
-    for element in COLOURS:
-        if kwargs[element + '_colour'] is not None:
-            COLOURS[element] = kwargs[element + '_colour']
 
     # adding the general parameters
     kwargs['colours'] = COLOURS
