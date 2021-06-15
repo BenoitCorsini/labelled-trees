@@ -36,3 +36,5 @@ This code mainly produces two types of results: representation of labelled trees
 ### Labelled tree representation
 
 The first result, obtained when running `LabelledTreePlot.tree()`, is a representation of the corresponding labelled tree. It is possible to plot or not the tree and the bijection, as well as the node numbers. With the current parameters, the results look like the following.
+
+<p align="center"><img width="50%" src="figures/labelled-tree.gif"/></p>
