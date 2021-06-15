@@ -459,7 +459,7 @@ class LabelledTreeAnimation(LabelledTreePlot):
         cv2.destroyAllWindows()
         print(f'Video saved in \'{video_file}\'')
 
-    def video(self, frames_dir=None, name='labelled-tree'):
+    def video(self, frames_dir=None, name='labelled-tree', **kwargs):
         '''
         Creates the video from start to finish
         '''

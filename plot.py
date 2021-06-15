@@ -22,6 +22,7 @@ class LabelledTreePlot(LabelledTree):
                  colours=COLOURS,
                  times=TIMES,
                  params=PARAMS,
+                 plot_numbers=True,
                  **kwargs):
         super().__init__(**kwargs)
         self.images_dir = images_dir
@@ -33,6 +34,7 @@ class LabelledTreePlot(LabelledTree):
         self.videos_dir = videos_dir
         if not osp.exists(self.videos_dir):
             os.makedirs(self.videos_dir)
+        self.plot_numbers = plot_numbers
 
         self.colours = colours
         self.times = times
@@ -394,7 +396,7 @@ class LabelledTreePlot(LabelledTree):
             )
 
         # plots the node number next to the sphere
-        if self.params['other']['plot_numbers']:
+        if self.plot_numbers:
             text = self.ax.text(
                 X + r,
                 Y + r,
@@ -614,7 +616,7 @@ class LabelledTreePlot(LabelledTree):
 
         return osp.join(save_dir, name)
 
-    def tree(self, name='tree', show_tree=True, show_bij=True):
+    def tree(self, name='tree', show_tree=True, show_bij=True, **kwargs):
         '''
         Save the image of the tree.
         '''

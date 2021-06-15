@@ -29,6 +29,14 @@ if __name__ == '__main__':
     parser.add_argument('--seed', type=int, default=None,
         help='the seed for reproducibility')
 
+    # some representation parameters
+    parser.add_argument('--plot_numbers', type=int, default=1,
+        help='if the numbers should be plotted or not (0 = not plotted; 1 = plotted)')
+    parser.add_argument('--show_tree', type=int, default=1,
+        help='if the tree should be represented in the image (0 = not represented; 1 = represented)')
+    parser.add_argument('--show_bij', type=int, default=1,
+        help='if the bijection should be represented in the image (0 = not represented; 1 = represented)')
+
     kwargs = vars(parser.parse_args())
 
     # adding the general parameters
@@ -39,6 +47,6 @@ if __name__ == '__main__':
     # running the algorithm
     ANIM = LabelledTreeAnimation(**kwargs)
     if kwargs['plot_tree']:
-        ANIM.tree(name=kwargs['name'])
+        ANIM.tree(**kwargs)
     if kwargs['animate']:
-        ANIM.video(name=kwargs['name'])
+        ANIM.video(**kwargs)

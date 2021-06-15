@@ -74,6 +74,5 @@ PARAMS = {
     'other' : {
         'figure_size' : 10,
         'ratio_point_to_inch' : 750,
-        'plot_numbers' : True,
     },
 }
