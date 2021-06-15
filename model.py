@@ -76,7 +76,7 @@ class LabelledTree(object):
         '''
         Computes the height of the node n.
         '''
-        return len(self._path[n]) - 1
+        return len(self.paths[n]) - 1
 
     def parent(self, n):
         '''
