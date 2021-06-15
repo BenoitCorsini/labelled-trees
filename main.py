@@ -24,7 +24,7 @@ if __name__ == '__main__':
         help='if the animation should be created or not (0 = not saved; 1 = saved)')
 
     # parameters of the tree
-    parser.add_argument('--n', type=int, default=10,
+    parser.add_argument('--n', type=int, default=7,
         help='the size of the tree')
     parser.add_argument('--seed', type=int, default=None,
         help='the seed for reproducibility')
