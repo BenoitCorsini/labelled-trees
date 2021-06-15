@@ -25,6 +25,7 @@ class LabelledTree(object):
         '''
         npr.seed(self.seed)
         self.cayley = 1 + npr.randint(self.n, size=self.n - 1)
+        self.nodes = sorted(list(set(self.cayley)))
         self.leaves = np.arange(1, self.n + 1)
         self.leaves = self.leaves[np.isin(self.leaves, self.cayley, invert=True)]
         self.root = self.cayley[0]
