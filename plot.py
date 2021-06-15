@@ -76,7 +76,7 @@ class LabelledTreePlot(LabelledTree):
         - for 1 - n <= i <= 0, self.pos[i] refers to the position of the -i-th node in the cayley sequence;
         '''
         self.pos = {}
-        for n in self:
+        for n in self.nodes:
             h = self.height(n)
             self.pos[n] = (h*npr.rand(), h) # forces the nodes to be ordered by height
         extra_edges = []
@@ -110,7 +110,7 @@ class LabelledTreePlot(LabelledTree):
         self.node_plots = {}
         self.edge_plots = {}
 
-        for n in self:
+        for n in self.nodes:
             if n == self.root:
                 self.node_plots[n] = {
                     'type' : 'root',

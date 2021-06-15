@@ -24,8 +24,8 @@ class LabelledTree(object):
         - self.children: a dictionary where self.children[node] is the list of children of the node.
         '''
         npr.seed(self.seed)
+        self.nodes = list(range(1, self.n + 1))
         self.cayley = 1 + npr.randint(self.n, size=self.n - 1)
-        self.nodes = sorted(list(set(self.cayley)))
         self.leaves = np.arange(1, self.n + 1)
         self.leaves = self.leaves[np.isin(self.leaves, self.cayley, invert=True)]
         self.root = self.cayley[0]
@@ -52,12 +52,6 @@ class LabelledTree(object):
             if x not in self.children:
                 self.children[x] = []
             self.children[x].append(y)
-
-    def __iter__(self):
-        '''
-        When iterating through the tree, simply go through the values 1 to n.
-        '''
-        return iter(range(1, self.n + 1))
 
     def resample(self):
         '''
