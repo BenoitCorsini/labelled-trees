@@ -37,4 +37,20 @@ This code mainly produces two types of results: representation of labelled trees
 
 The first result, obtained when running `LabelledTreePlot.tree()`, is a representation of the corresponding labelled tree. It is possible to plot or not the tree and the bijection, as well as the node numbers. With the current parameters, the results look like the following.
 
-<p align="center"><img width="50%" src="figures/labelled-tree.gif"/></p>
+<p align="center"><img width="50%" src="figures/labelled-tree.png"/></p>.
+
+### Labelled tree animation
+
+The second result, obtained when running `LabelledTreeAnimation.video()`, is an illustration of the line-breaking bijection. The videos start with the method to transform the tree into a sequence of numbers, and then shows the inverse method, from a sequence of numbers to the tree. Typical results look like the following.
+
+<p align="center"><img width="50%" src="figures/labelled-tree.gif"/></p>.
+
+### Studying random uniform labelled trees.
+
+The code developped in this project can also be useful to understand properties of random uniform labelled trees. Indeed, the `LabelledTree` starts by generating a uniformly sampled sequence and transforms it into its corresponding tree. Since the method used here is a bijection, this implies that the resulting trees are uniformly sampled as well. By using the `LabelledTreePlot` class, it is possible to obtain results as the following one, showing the structure of large randomly picked labelled trees.
+
+<p align="center"><img width="50%" src="figures/large-tree.png"/></p>.
+
+## Contact and information
+
+If you have any questions regarding the code, feel free to contact me at <benoitcorsini@gmail.com>.
