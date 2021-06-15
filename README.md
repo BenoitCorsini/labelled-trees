@@ -47,7 +47,7 @@ The second result, obtained when running `LabelledTreeAnimation.video()`, is an 
 
 The code developped in this project can also be useful in understanding properties of random uniform labelled trees. Indeed, the `LabelledTree` class starts by generating a uniformly sampled sequence and transforms it into its corresponding tree. Since the method used here is a bijection, this implies that the resulting trees are uniformly sampled as well. By using the `LabelledTreePlot` class, it is possible to obtain results as the following one, showing the structure of large randomly generated labelled trees.
 
-<p align="center"><img width="50%" src="figures/large-tree.png"/></p>.
+<p align="center"><img width="80%" src="figures/large-tree.png"/></p>.
 
 ## Contact and information
 
