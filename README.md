@@ -1,6 +1,6 @@
 # Labelled trees
 
-This project represents labelled trees and their relation to Cayley's formula. It is meant to illustrate the results of [Louigi Addario-Berry](http://problab.ca/louigi/) and [Serte Donderwinkel](https://www.sertedonderwinkel.com/) on [Cayley's formula via line-breaking](https://problab.ca/louigi/notes/ssprob2021.pdf).
+This project represents labelled trees and their relation to Cayley's formula. It is meant to illustrate the results of [Louigi Addario-Berry](http://problab.ca/louigi/) and [Serte Donderwinkel](https://www.sertedonderwinkel.com/) on [Cayley's formula via line-breaking](https://arxiv.org/abs/2107.09726).
 
 ## Getting started
 
